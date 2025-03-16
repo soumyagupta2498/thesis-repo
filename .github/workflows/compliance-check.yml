@@ -17,7 +17,7 @@ jobs:
       - name: Run local compliance script
         run: |
           echo "Running compliance check on self-hosted runner..."
-          python C:\Users\soumy\OneDrive\Desktop\ASU\Thesis\Basic example\compliance_check.py
+          python "C:\Users\soumy\OneDrive\Desktop\ASU\Thesis\Basic example\compliance_check.py"
 
       - name: Post results
         run: |
