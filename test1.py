@@ -1,3 +1,3 @@
 def retrieve_data():
-  db_password = 'secret1234'
+  db_password = 'secret123'
   return db_password
