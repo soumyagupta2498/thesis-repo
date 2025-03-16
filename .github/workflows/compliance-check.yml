@@ -20,5 +20,10 @@ jobs:
           python "C:\Users\soumy\OneDrive\Desktop\ASU\Thesis\Basic example\compliance_check.py"
 
       - name: Post results
+        shell: pwsh
         run: |
-          cat compliance_report.json || echo "No compliance report found"
+          if (Test-Path compliance_report.json) {
+              Get-Content compliance_report.json
+          } else {
+              Write-Output "No compliance report found"
+          }
