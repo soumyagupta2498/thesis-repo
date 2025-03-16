@@ -20,7 +20,7 @@ jobs:
           python "C:\Users\soumy\OneDrive\Desktop\ASU\Thesis\Basic example\compliance_check.py"
 
       - name: Post results
-        shell: pwsh
+        shell: powershell
         run: |
           if (Test-Path compliance_report.json) {
               Get-Content compliance_report.json
