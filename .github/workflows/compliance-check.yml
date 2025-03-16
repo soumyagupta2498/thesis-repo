@@ -27,3 +27,9 @@ jobs:
           } else {
               Write-Output "No compliance report found"
           }
+
+      - name: Upload compliance report
+        uses: actions/upload-artifact@v3
+        with:
+          name: compliance-report
+          path: compliance_report.json
