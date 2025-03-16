@@ -9,6 +9,9 @@ on:
 jobs:
   run-compliance-check:
     runs-on: self-hosted  # Use your local self-hosted runner
+    permissions:
+      actions: read  # Allow reading actions from GitHub
+      contents: read  # Allow reading repository contents
 
     steps:
       - name: Check out code
