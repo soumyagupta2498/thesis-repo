@@ -1,0 +1,24 @@
+name: Compliance Check
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  push:
+    branches: [main]
+
+jobs:
+  run-compliance-check:
+    runs-on: self-hosted  # Use your local self-hosted runner
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Run local compliance script
+        run: |
+          echo "Running compliance check on self-hosted runner..."
+          python C:\Users\soumy\OneDrive\Desktop\ASU\Thesis\Basic example\compliance_check.py
+
+      - name: Post results
+        run: |
+          cat compliance_report.json || echo "No compliance report found"
