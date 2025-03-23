@@ -13,7 +13,7 @@ def store_patient_record(patient):
         file.write(f"{patient.name},{patient.ssn},{patient.diagnosis}\n")
 
 def send_data_to_third_party(patient):
-    print(f"Sending {patient.name}'s data to third-party provider...")
+    print(f"Sending {patient.name}'s data to third party provider...")
 
 def log_activity(patient):
     logging.info(f"Accessed patient: {patient.name}, SSN: {patient.ssn}")
